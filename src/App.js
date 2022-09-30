@@ -1,6 +1,7 @@
 import './App.css';
 import Contacts from './components/Contacts';
 import Edit from './components/Contacts/Edit';
+import Error404 from './components/Error404';
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Contacts />} />
             <Route path="/edit/:id" element={<Edit />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </Router>
       </div>
