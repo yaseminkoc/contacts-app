@@ -5,11 +5,11 @@ import Item from './Item';
 function List() {
     const contacts = useSelector(contactSelectors.selectEntities);
   return (
-    <div>
+    <ul className='list'>
         {
             contacts.map(contact => (<Item key={contact.id} item={contact}/>))
         }
-    </div>
+    </ul>
   )
 }
 
